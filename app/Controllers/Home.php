@@ -4,9 +4,15 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		return view('welcome_message');
+		return view ('welcome_message');
 	}
 
 	//--------------------------------------------------------------------
 
+	public function show() {
+		$data['title'] = 'fikri';
+		echo view('mahasiswa/header', $data);
+		echo view('mahasiswa/index', $data);
+		echo view('mahasiswa/footer', $data);
+	}
 }
